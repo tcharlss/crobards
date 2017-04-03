@@ -1,0 +1,20 @@
+<paquet
+	prefix="quickmockup"
+	categorie="squelette"
+	version="0.1.0"
+	etat="dev"
+	compatibilite="[3.0.0;3.2.*]"
+	logo="images/quickmockup-32.png"
+	documentation=""
+>
+
+	<nom>Quick Mockup</nom>
+
+	<auteur lien='http://razack.wordpress.com'>tcharlss</auteur>
+	<credit lien='https://jdittrich.github.io/quickMockup/'>Jan Dittrich</credit>
+
+	<licence>GNU/GPL</licence>
+
+	<necessite nom="scssphp" compatibilite="[1.3.5;]" />
+
+</paquet>

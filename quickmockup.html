@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <!-- LICENSE: © Jan Dittrich & Contributors, 2015, MIT License (See LICENSE.md) -->
 
-<html>
+<html lang="#LANG">
 
 <head>
-		<title>quickMockup</title>
-		<meta charset="UTF-8">
-		<meta name="description" content="">
+		<title>#PLUGIN{quickmockup, nom}</title>
+		<meta charset="#CHARSET">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="#PLUGIN{quickmockup, slogan}">
 		<meta name="keywords" content="">
-		<script src="scripts/jquery.js"></script>
-		<script src="scripts/jquery-ui.js"></script>
-		<script src="scripts/showdown.js"></script>
-		<script src="scripts/showdownUIExtensions.js"></script>
-		<script src="scripts/mousetrap.js"></script>
-		<script src="scripts/filereader.js"></script>
-		<script src="scripts/FileSaver.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		#INSERT_HEAD
+		<script src="#CHEMIN{javascript/ui/jquery-ui.js}"></script>
+		<script src="#CHEMIN{javascript/showdown.js}"></script>
+		<script src="#CHEMIN{javascript/showdownUIExtensions.js}"></script>
+		<script src="#CHEMIN{javascript/mousetrap.js}"></script>
+		<script src="#CHEMIN{javascript/filereader.js}"></script>
+		<script src="#CHEMIN{javascript/FileSaver.js}"></script>
 
-		<script src="scripts/jqUiEditMD2HTML.js"></script>
+		<script src="#CHEMIN{javascript/jqUiEditMD2HTML.js}"></script>
 
-		<link href="styles/jquery-ui.css" rel="stylesheet">
-
+		#INSERT_HEAD_CSS
+		<link href="#CHEMIN{css/ui/jquery-ui.css}" rel="stylesheet">
 
 		<style>
 			#toolbar, #widgetCollectionWrap{display:none;}
@@ -45,7 +47,7 @@
 
 
 		</style>
-		<link href="styles/quickMockupInteractive.css" rel="stylesheet">
+		<link href="#CSS{css/quickMockupInteractive.css}" rel="stylesheet">
 
 		<!--elements -->
 		<!-- style has an ID so we can retrieve it for exporting html and css via a script reading the innerHTML of the style -->
@@ -1026,7 +1028,7 @@ made by Jan /@simulo" data-editable-mode="markdown">
 
 </div>
 
-<script src="scripts/webedit.js"></script>
+<script src="#CHEMIN{javascript/webedit.js}"></script>
 
 </body>
 
