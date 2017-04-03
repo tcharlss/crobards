@@ -1,0 +1,14 @@
+<ul id="elements" class="elements">
+	#SET{filtre_elements, #VAL{_DIR_PLUGIN_QUICKMOCKUP}|constant|concat{elements/*.html}}
+	<BOUCLE_elements(DATA){source glob, #GET{filtre_elements}}{par valeur}>
+	#SET{regex_numerotation,^\d+[\.\-_]\s?}
+	#SET{element,#VALEUR|pathinfo|table_valeur{filename}|replace{#GET{regex_numerotation}}}
+	#SET{fond,#VAL{elements/}|concat{#VALEUR|pathinfo|table_valeur{filename}}}
+	<li
+		class="elements__item"
+		title="[(#VAL{quickmockup:element_}|concat{#GET{element},_nom}|attribut_html)]"
+	>
+		[(#INCLURE{fond=#GET{fond}, class=element element--nouveau element--#GET{element}})]
+	</li>
+	</BOUCLE_elements>
+</ul>

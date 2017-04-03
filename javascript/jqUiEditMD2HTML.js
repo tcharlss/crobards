@@ -10,7 +10,11 @@
 		inputElement:null,
 		_init:function(){ //init is called 1)on creation  2)each time when the plugin in called without further arguments
 
-			if(this.element.find(".editableArea").length === 0){return;} //if the element can't be edited TODO: cleaner solution?
+			//if the element can't be edited TODO: cleaner solution?
+			if (this.element.find(".editableArea").length === 0){
+				console.log(this.element);
+				return;
+			}
 
 			//if the editable element has a markdown area, render it to the element
 			var editableContent = this.element.attr("data-editable-content");
@@ -20,7 +24,9 @@
 
 		},
 		_create:function(){//create is only fired on creation. Use it to create markup and bind events
-			var idNr = this.element.attr("id").split("_")[1]; //takes the part behind the "_"
+			var idNr = this.element.attr("id") !== undefined ?
+				this.element.attr("id").split("_")[1] :
+				parseInt(Math.random() * 100000000000000); //takes the part behind the "_"
 			var markdownConverter = null;
 
 			this.$editableElement = this.element.find("#"+"editableArea_"+idNr);
@@ -57,7 +63,7 @@
 			var editableContent =  this.element.attr("data-editable-content");
 			//write to edit window
 
-			if($(event.target).closest(".mockElement")[0] !== this.element[0]){
+			if($(event.target).closest(".element")[0] !== this.element[0]){
 				return;
 			}
 

@@ -1,0 +1,698 @@
+.newMockElement,
+.element {
+	box-sizing: border-box;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+	position: relative;
+	background: rgba(255, 255, 255, 0.8);
+	width: 10em;
+}
+
+.newMockElement>div.editableArea,
+.element>div.editableArea {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.newMockElement a,
+.element a {
+	color: #0093ff;
+	pointer-events: none;
+	/*otherwise, links in elements, markdown etc. can be clicked and lead away from the app.*/
+}
+
+.newMockElement a,
+.element a:visited {
+	color: #0093ff/*no visted state for mockup links*/
+}
+
+.editableArea>p {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+/*buttons*/
+
+.newMockElement.button,
+.element.button {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border: 2px solid #333;
+	border-radius: 3px;
+	background: white;
+	width: 8em;
+	width: 8em;
+	height: 3em;
+	box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+/*Window*/
+
+.newMockElement.dialogWindow,
+.element.dialogWindow {
+	border: 2px solid gray;
+	border-radius: 3px;
+	width: 400px;
+	height: 200px;
+}
+
+.newMockElement.dialogWindow>.dialogWindow-bar,
+.element.dialogWindow>.dialogWindow-bar {
+	background-color: silver;
+	border-bottom: 2px solid #333;
+	border-radius: 3px;
+	padding: 7px;
+	height: 1.6em;
+}
+
+.newMockElement.dialogWindow>div>.dialogWindow-closeButton,
+.element.dialogWindow>div>.dialogWindow-closeButton {
+	padding: 4px;
+	font-size: 1.5em;
+	margin-top: -0.4em;
+	float: right;
+}
+/*tabs*/
+
+.newMockElement.tabs,
+.element.tabs {
+	background: rgba(0, 0, 0, 0);
+	width: 30em;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.newMockElement.tabs>.editableArea,
+.element.tabs>.editableArea {
+	border-bottom: 2px solid gray;
+	background: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+}
+
+.newMockElement.tabs>.editableArea a,
+.element.tabs>.editableArea a {
+	pointer-events: none;
+	/*prevent accidental navigation*/
+}
+
+.newMockElement.tabs>.editableArea>ul,
+.element.tabs>.editableArea>ul {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.newMockElement.tabs>.editableArea>ul>li,
+.element.tabs>.editableArea>ul>li {
+	display: inline-block;
+	padding: 5px 16px;
+	border: 1px solid gray;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	margin: 0 0 -2px 0.3em;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+	background: white;
+}
+
+.element.tabs>.editableArea>ul>li.item-highlighted,
+.newMockElement.tabs>.editableArea>ul>li.item-highlighted {
+	background: #DDD;
+}
+
+.newMockElement.label .element.label {
+	width: 7em;
+	background-color: transparent;
+}
+
+.newMockElement.link,
+.element.link {
+	width: 7em;
+	color: #0093ff;
+	text-decoration: underline;
+}
+/*headline*/
+
+.newMockElement.headline>h1,
+.element.headline>h1 {
+	margin: 0;
+	background-color: transparent;
+}
+/*paragraph*/
+
+.newMockElement.paragraph>p {
+	margin: 0;
+}
+/*table*/
+
+.newMockElement.table,
+.element.table {
+	width: 10em;
+}
+
+.newMockElement.table table,
+.element.table table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.newMockElement.table table td,
+.element.table table td,
+.newMockElement.table table th,
+.element.table table th {
+	border: 1px solid gray;
+}
+
+.newMockElement.table table th,
+.element.table table th {
+	border-bottom: 2px solid black;
+}
+/*just a rectangle*/
+
+.newMockElement.rect,
+.element.rect {
+	border: 2px solid rgba(0, 0, 0, 0.8);
+	width: 200px;
+	height: 50px;
+	background-color: transparent;
+}
+
+.newMockElement.grayrect,
+.element.grayrect {
+	border: 2px solid #333;
+	width: 200px;
+	height: 50px;
+	background-color: lightgrey;
+}
+
+.newMockElement.invisiblerect,
+.element.invisiblerect {
+	width: 200px;
+	height: 50px;
+	background-color: transparent;
+	margin: 2px;
+}
+
+.element.invisiblerect>.desc {
+	display: none;
+}
+
+.newMockElement.invisiblerect,
+.element.invisiblerect:hover,
+.element.invisiblerect.custom-selected {
+	border: 2px solid lightgrey;
+	margin: 0;
+}
+
+.newMockElement.whiterect,
+.element.whiterect {
+	border: 2px solid rgba(150, 150, 150, 0.05);
+	width: 200px;
+	height: 50px;
+	background-color: white;
+}
+/*optionlist*/
+
+.newMockElement.optionRadiobutton,
+.element.optionRadiobutton {
+	box-sizing: border-box;
+	background-color: transparent;
+}
+
+.newMockElement.optionRadiobutton .editableArea li,
+.element.optionRadiobutton .editableArea li {
+	display: block;
+}
+
+.newMockElement.optionRadiobutton ul,
+.element.optionRadiobutton ul {
+	margin: 0;
+	padding: 0;
+}
+
+.newMockElement.optionRadiobutton .editableArea li::before,
+.element.optionRadiobutton .editableArea li::before {
+	/*implements a simulated radio button, since uiconde circles and the "fisheye" character were inconsisted in size*/
+	content: " ";
+	display: inline-block;
+	background: white;
+	width: 0.8em;
+	height: 0.8em;
+	position: relative;
+	top: 0.1em;
+	margin: 0 0.3em 0 0;
+	padding: 0;
+	border-radius: 10em;
+	border: 2px inset gray;
+	box-sizing: border-box;
+}
+
+.newMockElement.optionRadiobutton .editableArea li.item-highlighted::before,
+.element.optionRadiobutton .editableArea li.item-highlighted::before {
+	content: "";
+	background: black;
+	background-clip: content-box;
+	padding: 0.1em;
+}
+/*Checkboxes*/
+
+.newMockElement.optionCheckbox,
+.element.optionCheckbox {
+	box-sizing: border-box;
+}
+
+.newMockElement.optionCheckbox .editableArea li,
+.element.optionCheckbox .editableArea li {
+	display: block;
+}
+
+.newMockElement.optionCheckbox ul,
+.element.optionCheckbox ul {
+	margin: 0;
+	padding: 0;
+}
+
+.newMockElement.optionCheckbox .editableArea li::before,
+.element.optionCheckbox .editableArea li::before {
+	content: "☐ "
+}
+
+.newMockElement.optionCheckbox .editableArea li.item-highlighted::before,
+.element.optionCheckbox .editableArea li.item-highlighted::before {
+	content: "☑ ";
+}
+/*Dropdown*/
+
+.dropdownList {
+	border: 2px solid gray;
+	border-radius: 3px;
+	padding: 0px 0 0px 0.4em;
+	display: table;
+	background-color: white;
+}
+
+.dropdownList .editableArea {
+	display: table-cell;
+	text-align: center;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.dropdownList .mockelement-dropdown-arrow {
+	border-left: 1px solid rgb(128, 128, 128);
+	padding: 0px 0.4em;
+	display: table-cell;
+	text-align: center;
+	height: 100%;
+	vertical-align: middle;
+	background: #EEE;
+}
+/*input Box*/
+
+.newMockElement.inputbox,
+.element.inputbox {
+	border: 2px solid darkgray;
+	align-items: center;
+	display: flex;
+	border: 2px solid #333;
+	padding-left: 0.4em;
+}
+/*spinner*/
+
+.newMockElement.spinner,
+.element.spinner {
+	border: 2px solid darkgray;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border: 2px solid #333;
+	background-color: white;
+}
+
+.newMockElement.spinner::before,
+.element.spinner::before {
+	content: "▴";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 0;
+	top: 0;
+	width: 1.5em;
+	height: 50%;
+	background: lightgray;
+	font-size: 0.7em;
+}
+
+.newMockElement.spinner::after,
+.element.spinner::after {
+	content: "▾";
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 0px;
+	bottom: 0px;
+	width: 1.5em;
+	height: 50%;
+	background: lightgray;
+	font-size: 0.7em;
+	box-sizing: border-box;
+	padding-bottom: 0.2em;
+	border-top: 1px solid gray;
+}
+/*slider*/
+
+.newMockElement.slider,
+.element.slider {
+	align-items: center;
+	display: flex;
+}
+
+.newMockElement.slider:before,
+.element.slider::before {
+	content: " ";
+	height: 0.5em;
+	width: 0.5em;
+	background: white;
+	border: 3px solid #333;
+	border-radius: 10em;
+	position: relative;
+	left: 3em;
+}
+
+.newMockElement.slider:after,
+.element.slider::after {
+	content: " ";
+	height: 2px;
+	background: #222;
+	width: 100%;
+}
+/*loading indicator*/
+
+.newMockElement.loadingIndicator,
+.element.loadingIndicator {
+	border: 1px solid gray;
+	border-radius: 2px;
+	background-color: white;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: relative
+}
+
+.newMockElement.loadingIndicator .bar,
+.element.loadingIndicator .bar {
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.21);
+	width: 70%;
+	display: block;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+/*entries vertical*/
+
+.newMockElement.entries-horizontal,
+.element.entries-horizontal {
+	background: white;
+	width: 15em;
+}
+
+.newMockElement.entries-horizontal .editableArea,
+.element.entries-horizontal .editableArea {
+	background: white;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.newMockElement.entries-horizontal .editableArea ul,
+.element.entries-horizontal .editableArea ul {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: table;
+	border-collapse: collapse;
+}
+
+.newMockElement.entries-horizontal ul li,
+.element.entries-horizontal ul li {
+	display: table-cell;
+	padding: 0.2em;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	margin: 0;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.element.entries-horizontal ul li.item-highlighted {
+	background: #DDD;
+}
+/*entries horizontal*/
+
+.newMockElement.entries-vertical,
+.element.entries-vertical {
+	background: white;
+	width: 30em;
+}
+
+.newMockElement.entries-vertical .editableArea,
+.element.entries-vertical .editableArea {
+	background: white;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.newMockElement.entries-vertical .editableArea ul,
+.element.entries-vertical .editableArea ul {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.newMockElement.entries-vertical ul li,
+.element.entries-vertical ul li {
+	margin: 0px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	width: 150px;
+	padding: 0.2em;
+	flex: 1 1 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgb(128, 128, 128);
+	border-collapse: collapse;
+	margin-top: -1px;
+}
+
+.element.entries-vertical ul li.item-highlighted {
+	background: #DDD;
+}
+/*boxes vertical*/
+
+.newMockElement.boxes-horizontal,
+.element.boxes-horizontal {
+	background: rgba(0, 0, 0, 0);
+	width: 15em;
+}
+
+.newMockElement.boxes-horizontal .editableArea,
+.element.boxes-horizontal .editableArea {
+	background: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.newMockElement.boxes-horizontal .editableArea ul,
+.element.boxes-horizontal .editableArea ul {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+.newMockElement.boxes-horizontal ul li,
+.element.boxes-horizontal ul li {
+	padding: 0.2em;
+	border: 1px solid rgb(128, 128, 128);
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	margin: 0.2em;
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.element.boxes-horizontal ul li.item-highlighted {
+	background: #DDD;
+}
+/*boxes vertical*/
+
+.newMockElement.boxes-vertical,
+.element.boxes-vertical {
+	background: rgba(0, 0, 0, 0);
+	width: 10em;
+}
+
+.newMockElement.boxes-vertical .editableArea,
+.element.boxes-vertical .editableArea {
+	background: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.newMockElement.boxes-vertical .editableArea ul,
+.element.boxes-vertical .editableArea ul {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.newMockElement.boxes-vertical ul li,
+.element.boxes-vertical ul li {
+	margin: 1.5% 0 0 0;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	width: 99%;
+	padding: 0.2em;
+	flex: 1 1 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgb(128, 128, 128);
+	border-collapse: collapse;
+}
+
+.element.boxes-vertical ul li.item-highlighted {
+	background: #DDD;
+}
+/*iconbar*/
+
+.newMockElement.boxes-iconbar-horizontal ul>li,
+.element.boxes-iconbar-horizontal ul>li {
+	border: 2px solid rgb(128, 128, 128);
+	display: flex;
+	justify-content: center;
+	font-size: 1.7em;
+	align-items: center;
+	border-radius: 3px;
+	color: rgb(51, 51, 51);
+	flex: 1 1 0%;
+	margin: 0.1em;
+	padding: 0.1em 0.1em 0.2em;
+	background: white;
+}
+
+.newMockElement.boxes-iconbar-horizontal ul>li {
+	min-width: 1em;
+}
+/*image placeholder*/
+
+.newMockElement.imageplaceholder,
+.element.imageplaceholder {
+	color: darkgray;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 5em;
+}
+/*actual image*/
+
+.newMockElement.actualimage,
+.element.actualimage {
+	height: 5em;
+}
+
+.element.actualimage>p {
+	background: lightgray;
+	color: gray;
+}
+
+.element.actualimage img {
+	width: 100%;
+	height: 100%;
+}
+/*meta: note*/
+
+.newMockElement.note,
+.element.note {
+	background: #f7ee9e;
+	background: linear-gradient(to bottom, #f7ee9e 0%, #e0d68f 99%);
+	border: 0px none;
+	box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.4);
+	transform: rotate(-3deg);
+	width: 150px;
+	height: 150px;
+}
+
+.newMockElement.note>*,
+.element.note>* {
+	transform: rotate(3deg);
+	/*so the text is not rotated*/
+}
+
+.newMockElement.note .editableArea,
+.element.note .editableArea {
+	padding: 0.5em;
+}
+/*Meta: arrow note*/
+
+.newMockElement.arrownote,
+.element.arrownote {
+	background: #f7ee9e;
+	border: 0px none;
+	box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.4);
+	width: 150px;
+	height: 30px;
+}
+
+.newMockElement.arrownote .editableArea,
+.element.arrownote .editableArea {
+	padding: 0.2em;
+}
+
+.newMockElement.arrownote::before,
+.element.arrownote::before {
+	width: 0;
+	height: 0;
+	margin-left: -15px;
+	margin-top: 0px;
+	border-style: solid;
+	border-width: 15px 15px 15px 0;
+	border-color: transparent #eae193 transparent transparent;
+	content: "";
+	position: absolute;
+}
+
+.newMockElement.note .editableArea,
+.element.note .editableArea {
+	padding: 0.5em;
+}

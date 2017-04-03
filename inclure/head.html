@@ -1,0 +1,27 @@
+<title>#PLUGIN{quickmockup, nom}</title>
+<meta charset="#CHARSET">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="#PLUGIN{quickmockup, slogan}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+#INSERT_HEAD
+<script src="#CHEMIN{javascript/ui/jquery-ui.js}"></script>
+<script src="#CHEMIN{javascript/showdown.js}"></script>
+<script src="#CHEMIN{javascript/showdownUIExtensions.js}"></script>
+<script src="#CHEMIN{javascript/mousetrap.js}"></script>
+<script src="#CHEMIN{javascript/filereader.js}"></script>
+<script src="#CHEMIN{javascript/FileSaver.js}"></script>
+<script src="#CHEMIN{javascript/jqUiEditMD2HTML.js}"></script>
+<script src="#CHEMIN{javascript/quickmockup.js}"></script>
+
+#INSERT_HEAD_CSS
+<link href="#CHEMIN{css/ui/jquery-ui.css}" rel="stylesheet">
+<link href="#CSS{css/quickmockup/quickmockup.css}" rel="stylesheet">
+[(#REM) Le thème doit être inclus en inline avec un ID pour l'export HTML.
+				Faux commentaire sinon la coloration syntaxique perd son latin.
+<!--]
+#SET{theme,#ENV{theme}|in_array{#LISTE{dark,light,sketch,old}}|?{#ENV{theme},old}}
+<style id="elementStyles">
+	[(#INCLURE{#CHEMIN{css/quickmockup/theme_#GET{theme}/#GET{theme}.scss}}|scss_css)]
+</style>
+[(#REM)-->]
