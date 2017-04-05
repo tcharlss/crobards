@@ -234,59 +234,46 @@ $(function() {
 		]
 	});
 	
-	//setup toolbar
-	///setup toolbar-delete button
-	$("#toolbar .delete-element-button").click(deleteElement.delete); //delete button
+	/**
+	 * Barre d'outils principale
+	 */
+	// Bouton supprimer
+	$('[data-btn=supprimer-element]').click(deleteElement.delete); //delete button
 	Mousetrap.bind(['del', 'backspace'], function(e) {
 		if (e.preventDefault) {
 			e.preventDefault();
 		}
 		deleteElement.delete();
-	}); //keyboard shortcut
-	
-	
-	$("#toolbar .undelete-element-button").click(deleteElement.undelete);
+	});
+	// Bouton annuler
+	$('[data-btn=annuler]').click(deleteElement.undelete);
 	Mousetrap.bind(['ctrl+z', 'command+z'], deleteElement.undelete);
-	
-	$("#toolbar .duplicate-element-button").click(duplicateElement);
+	// Bouton dupliquer
+	$('[data-btn=dupliquer-element]').click(duplicateElement);
 	Mousetrap.bind(['ctrl+d', 'command+d'], function(e) {
 		if (e.preventDefault) {
 			e.preventDefault();
 		}
 		duplicateElement();
 	});
-	
-	$("#toolbar .change-canvasize-button").click(function() {
+	// Bouton taille du canevas
+	$('[data-btn=taille-canevas]').click(function() {
 		$("#changeCanvasSizeDialog").dialog("open");
 	});
-	
-	$('#saveFile').click(function() {
+	// Bouton enregistrer
+	$('[data-btn=enregistrer-html]').click(function() {
 		saveDocumentCode();
 	})
-	
-	$('#loadFileButton').click(function() {
+	// Bouton ouvrir
+	$('[data-btn=ouvrir-html]').click(function() {
 		$("#loadFile").click();
 	})
-	
-	//setup sidebar resize
-	$('#aside').resizable({
-		handles: 'e',
-		maxWidth: 800,
-	})
-
-	// prevent navigating away by accident
-	window.onbeforeunload = function() {
-		return "do you want to close the application? Unsaved changes will be lost (use your browsers save function for saving)"
-	};
-	
-	/* Partager sur codepen */
+	// Bouton partager sur codepen
 	$('[data-btn=codepen]').click(function() {
 		var htmlSource = $("#main"),
 		cssSource = $("#elementStyles");
-		
 		//if there is already a send-to-codepen-form, delete it
 		$("form#sendToCodepen").remove();
-		
 		var htmlString = htmlSource.
 		clone(). //for coming manipulations, so we don't actually change the original
 		find(".ui-resizable-handle"). //find handles...
@@ -295,7 +282,6 @@ $(function() {
 		find("*"). //every element
 		each(function(index, element) {
 			var oldString = $(element).attr("data-editable-content") || "";
-			
 			//replace all ' and " by similar looking characters. //They can't be replaced by their actual html entities
 			//since they have particular meaning (determine strings)
 			//and thus mess up the syntax, since they would be replaced with the same chars like the characters that are actualy used to determine strings.
@@ -305,19 +291,14 @@ $(function() {
 			);
 		}).
 		html();
-		
-		
 		var cssString = cssSource
 		.html();
-		
 		var data = {
 			html: htmlString,
 			css: cssString,
 			js: ""
 		};
-		
 		var jsonstring = JSON.stringify(data).replace(/"/g, "&quot;").replace(/'/g, "&apos;");
-		
 		var form =
 		'<form id="sendToCodepen" action="http://codepen.io/pen/define" method="POST" target="_blank" style="display:none;">' +
 		'<input type="hidden" name="data" value=\'' +
@@ -330,11 +311,30 @@ $(function() {
 		
 	});
 	
-	// scrollbars
-	$('#main').perfectScrollbar();
+	/**
+	 * Colonnes redimensionnables
+	 */
+	$('#aside').resizable({
+		handles: 'e',
+		maxWidth: 800,
+	})
+
+	/**
+	 * Message pour ne pas perdre un template non enregistré
+	 */
+	/*window.onbeforeunload = function() {
+		var message = $('.message-quitter').length() > 1 ?
+			$('.message-quitter').html() : 
+			'Do you want to close the application? Unsaved changes will be lost';
+		return message;
+	};*/
 	
-	// Drag and scroll
-	$('#main').dragScroll();
+	/**
+	 * Contenu principal : barres de défilement + drag and scroll
+	 */
+	$('#main')
+		.perfectScrollbar()
+		.dragScroll();
 	
 })(); //setupgui end
 
