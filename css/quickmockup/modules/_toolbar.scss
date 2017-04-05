@@ -27,7 +27,7 @@
 		&--ouvrir-html {
 			@extend .icon-folder-open;
 		}
-		&--sauver-html {
+		&--enregistrer-html {
 			@extend .icon-download;
 		}
 		&--annuler {
@@ -36,7 +36,7 @@
 		&--dupliquer-element {
 			@extend .icon-docs;
 		}
-		&--effacer-element {
+		&--supprimer-element {
 			@extend .icon-cancel;
 		}
 		&--taille-canevas {

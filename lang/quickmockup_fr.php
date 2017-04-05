@@ -12,6 +12,22 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'aide_editer_texte' => 'Éditez le texte avec un double clic.',
 	'aide_drag_drop' => 'Déplacez des éléments par cliquer-glisser.',
 
+	// B
+	'bouton_ouvrir_html_label' => 'Ouvrir',
+	'bouton_ouvrir_html_explication' => 'Ouvrir un template',
+	'bouton_enregistrer_html_label' => 'Enregistrer',
+	'bouton_enregistrer_html_explication' => 'Enregistrer le template',
+	'bouton_supprimer_element_label' => 'Effacer',
+	'bouton_supprimer_element_explication' => 'Effacer l\'élément sélectionné (Del)',
+	'bouton_annuler_label' => 'Annuler',
+	'bouton_annuler_explication' => 'Annuler la dernière suppression d\'élément (Ctrl+Z)',
+	'bouton_dupliquer_element_label' => 'Dupliquer',
+	'bouton_dupliquer_element_explication' => 'Dupliquer l\'élément sélectionné (Ctrl+D)',
+	'bouton_taille_canevas_label' => 'Dimensions',
+	'bouton_taille_canevas_explication' => 'Changer les dimensions du canevas',
+	'bouton_codepen_label' => 'Codepen',
+	'bouton_codepen_explication' => 'Partager le template sur Codepen',
+
 	// E
 	'element_image_nom' => 'Image',
 	'element_image_custom_nom' => 'Image',
