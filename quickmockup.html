@@ -1,41 +1,49 @@
 <!DOCTYPE html>
-<html lang="#LANG">
-#SET{theme,#ENV{theme}|in_array{#LISTE{dark,light,sketch,old}}|?{#ENV{theme},light}}
+#SET{themes,#LISTE{light,dark,sketch,old}}
+#SET{theme,#ENV{theme}|in_array{#GET{themes}}|?{#ENV{theme},#GET{themes/0}}}
+<html lang="#LANG" class="[theme_(#GET{theme})]">
 
 <head>
 	<INCLURE{fond=inclure/head, theme=#GET{theme}}>
 </head>
 
-<body class="theme_#GET{theme}">
+<body>
+	[(#REM) Conteneur général ]
 	<div id="page" class="page">
 
-		[(#REM) Barre d'outils ]
+		[(#REM) Header : barre d'outils ]
 		<header id="header" class="page__header" role="banner">
 			<INCLURE{fond=inclure/header}>
 		</header>
 
-		[(#REM) Liste des éléments ]
-		<aside id="aside" class="page__aside" role="complementary">
-			<INCLURE{fond=inclure/aside}>
-		</aside>
+		[(#REM) Conteneur central ]
+		<div id="central" class="page__central">
 
-		[(#REM) Canvas ]
-		<main id="main" class="page__main" role="main">
-			<div id="canvas" class="ui-droppable" style="height: 2000px; width: 2000px;">
-				<INCLURE{fond=inclure/canvas_defaut}>
-			</div>
-		</main>
+			[(#REM) Aside : liste des éléments ]
+			<aside id="aside" class="page__aside" role="complementary" data-resizable="e">
+				<INCLURE{fond=inclure/aside}>
+			</aside>
 
-		[(#REM) Infos ]
+			[(#REM) Main : canevas ]
+			<main id="main" class="page__main" role="main">
+				<div id="canevas" class="page__canevas ui-droppable" style="height: 2000px; width: 2000px;">
+					<INCLURE{fond=inclure/canevas_defaut}>
+				</div>
+			</main>
+
+			[(#REM) Extra : propriétés des éléments ]
+			<aside id="extra" class="page__extra" role="complementary" data-resizable="w">
+			</aside>
+
+		</div>
+
+		[(#REM) Footer : infos ]
 		<footer id="footer" class="page__footer" role="contentinfo">
 			<INCLURE{fond=inclure/footer}>
 		</footer>
 
-		<div id="changeCanvasSizeDialog" class="dialog">
-			<p>Change the size of the Canvas</p>
-			<label>Width:<br><input type="text" name="width"></label><br>
-			<label>Height:<br><input type="text" name="height"></label>
-		</div>
+		[(#REM) Choses techniques non visibles par défaut (modales, etc.) ]
+		<INCLURE{fond=inclure/invisible}/>
 
 	</div>
 </body>

@@ -19,11 +19,17 @@
 	border-right: 1px solid $couleur-bordure;
 }
 
-/* Contenu principal + canvas */
+/* Colonne latérale : paramètres des éléments */
+#extra {
+	background-color: $couleur-extra;
+	border-left: 1px solid $couleur-bordure;
+}
+
+/* Contenu principal + canevas */
 #main {
 	background-color: $couleur-main;
 }
-#canvas {
+#canevas {
 	background-color: $couleur-canevas;
 	box-shadow: 0 0 0.33rem rgba(0, 0, 0, 0.05);
 }

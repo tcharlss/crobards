@@ -2,49 +2,70 @@
  * LAYOUT : placement des blocs principaux, gouttière.
  */
 
+
 /* Conteneur général */
 #page {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column nowrap;
 	width: 100%;
 	height: 100%;
+	max-height: 100%;
 }
 
 /* Header : boutons */
 #header {
-	flex: 1 0 100%;
-	height: $hauteur-header;
+	flex: 0 1 auto;
+	padding: $gouttiere-v/4 $gouttiere-h/2;
+}
+
+/* Conteneur central */
+#central {
+	/* contenu flex */
+	flex: 1 0 auto;
+	/* conteneur flex */
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+/* Pied de page : infos diverses */
+#footer {
+	flex: 0 1 auto;
 	padding: $gouttiere-v/2 $gouttiere-h/2;
 }
+
+
+/* ==== Dans le conteneur central ==== */
+
 
 /* Colonne latérale : liste des éléments */
 #aside {
 	flex: 0 1 auto;
 	width: $largeur-aside;
-	height: calc(100% - (#{$hauteur-header} + #{$hauteur-footer}));
 	.aside__inner {
 		overflow-y: auto;
 		overflow-x: hidden;
-		height: 100%;
+		height: 100%; // [FIXME] La hauteur est fixée en JS
+		position: relative;
 	}
 }
 
-/* Contenu principal + canvas */
+/* Colonne latérale : propriétés des éléments */
+#extra {
+	flex: 0 1 auto;
+	width: $largeur-extra;
+	left: 0 !important; // Bug jQuery UI ?
+}
+
+/* Contenu principal : canevas */
 #main {
 	flex: 1 0 auto;
 	position: relative;
 	overflow: scroll;
 }
-#canvas {
+#canevas {
 	position: absolute;
 	top: $gouttiere-v*2;
 	right: $gouttiere-v*2;
 	bottom : $gouttiere-v*2;
 	left: $gouttiere-h*2;
-}
-
-/* Pied de page : infos diverses */
-#footer {
-	flex: 1 0 100%;
-	height: $hauteur-footer;
 }

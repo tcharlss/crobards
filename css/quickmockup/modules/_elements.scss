@@ -27,11 +27,11 @@
 /* Tous */
 [class|=element] {
   padding: $gouttiere-v/2 $gouttiere-h/2;
-  //overflow: hidden;
   /* survol */
   &:hover {
     cursor: grab;
   }
+	/* reset du contenu */
   ul {
     list-style: none;
     margin: 0;
@@ -50,18 +50,12 @@
     }
   }
 }
-/* Sur le canvas */
+/* Sur le canevas */
 .element {
-	/* cacher la bordure de redimensionnement par défaut */
-  &:not(.ui-resizable-resizing) {
+	/* cacher la bordure de redimensionnement si pas survolé, sélectionné ou en cours de redimensionnement */
+  &:not(:hover):not(.ui-resizable-resizing):not(.element--actif) {
     .ui-resizable-handle {
       opacity: 0;
-    }
-  }
-  /* survol : afficher la bordure de redimensionnement */
-  &:hover {
-    .ui-resizable-handle {
-      opacity: 1;
     }
   }
 }

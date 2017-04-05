@@ -8,6 +8,7 @@ $couleur-gris-fonce: hsl(0, 0%, 15%);
 /* couleurs de fond des blocs principaux */
 $couleur-bg:      $couleur-gris-clair; // fond de page
 $couleur-aside:   white;
+$couleur-extra:   white;
 $couleur-header:  $couleur-gris-clair;
 $couleur-footer:  $couleur-gris-clair;
 $couleur-main:    $couleur-gris-clair;
@@ -16,7 +17,7 @@ $couleur-canevas: white; // canevas
 /* couleurs de fond des modules */
 $couleur-element:         white;
 $couleur-element-nouveau: $couleur-gris-clair;
-$couleur-bordure:         hsl(0, 0%, 75%);
+$couleur-bordure:         hsl(0, 0%, 85%);
 
 /* couleurs typo */
 $couleur-texte: hsl(0, 0%, 15%);

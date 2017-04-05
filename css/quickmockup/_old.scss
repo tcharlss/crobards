@@ -7,7 +7,7 @@ div {
 	padding: 0;
 	margin: 0;
 }
-#canvas .custom-selected.ui-resizable>.ui-resizable-handle {
+#canevas .custom-selected.ui-resizable>.ui-resizable-handle {
 	pointer-events: auto;
 	background: rgba(0, 0, 0, 0);
 	/*the following stylesheet shows these again. If only html is saved (and the mockup not interactive thus, they are hidden)*/
@@ -15,7 +15,7 @@ div {
 #main {
 	background-color: gray;
 }
-#canvas {
+#canevas {
 	background-color: white;
 }
 
@@ -46,16 +46,16 @@ body {
 }
 
 #main {
-  /*wraps... canvas! (to enable scrolling it)*/
+  /*wraps... canevas! (to enable scrolling it)*/
   overflow: scroll;
   margin: 0px;
   padding: 0px;
   flex: 1 1 100%;
   position: relative;
-  /*so that canvas is positioned against it*/
+  /*so that canevas is positioned against it*/
 }
 
-#canvas {
+#canevas {
   /*holds the mockup elements*/
   position: absolute;
   margin: 0;
@@ -63,7 +63,7 @@ body {
   width: 1000px;
   height: 2000px;
   border-left: 1px solid gray;
-  /*give same color as canvas wrapper background*/
+  /*give same color as canevas wrapper background*/
   border-top: 1px solid gray;
 }
 
@@ -129,12 +129,12 @@ body {
 
 .custom-selected {}
 
-#canvas .ui-resizable>.ui-resizable-handle {
+#canevas .ui-resizable>.ui-resizable-handle {
   pointer-events: none;
   background: rgba(0, 0, 0, 0.0);
 }
 
-#canvas .custom-selected.ui-resizable>.ui-resizable-handle {
+#canevas .custom-selected.ui-resizable>.ui-resizable-handle {
   pointer-events: auto;
   background: rgba(0, 0, 0, 0.5);
 }
@@ -153,12 +153,12 @@ body {
 
 /*JQUERY UI Modifacations, makes handles inkscape-style*/
 
-#canvas .ui-selected {
+#canevas .ui-selected {
   background: #F39814;
   color: white;
 }
 
-#canvas .ui-resizable-handle {
+#canevas .ui-resizable-handle {
   width: 8px !important;
   height: 8px !important;
 }
@@ -166,42 +166,42 @@ body {
 
 /*all handles*/
 
-#canvas .ui-resizable-n {
+#canevas .ui-resizable-n {
   left: calc(50% - 4px);
   top: -5px
 }
 
-#canvas .ui-resizable-e {
+#canevas .ui-resizable-e {
   right: -5px;
   top: calc(50% - 4px)
 }
 
-#canvas .ui-resizable-s {
+#canevas .ui-resizable-s {
   left: calc(50% - 4px);
   bottom: -5px
 }
 
-#canvas .ui-resizable-w {
+#canevas .ui-resizable-w {
   left: -5px;
   top: calc(50% - 4px)
 }
 
-#canvas .ui-resizable-ne {
+#canevas .ui-resizable-ne {
   right: -5px;
   top: -5px
 }
 
-#canvas .ui-resizable-se {
+#canevas .ui-resizable-se {
   right: -5px;
   bottom: -5px;
 }
 
-#canvas .ui-resizable-sw {
+#canevas .ui-resizable-sw {
   left: -5px;
   bottom: -5px;
 }
 
-#canvas .ui-resizable-nw {
+#canevas .ui-resizable-nw {
   left: -5px;
   top: -5px;
 }
