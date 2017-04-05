@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-.newMockElement {
+.element--nouveau {
   width: 10em;
 }
 
@@ -96,7 +96,7 @@ body {
   margin-left: -3px;
 }
 
-#elements>li>.newMockElement:hover {
+#elements>li>.element--nouveau:hover {
   outline: 2px solid rgba(148, 216, 24, 0.5);
 }
 

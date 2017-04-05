@@ -1,0 +1,35 @@
+/**
+ * LAYOUT
+ */
+
+/* Conteneur général */
+#page {
+	background-color: $couleur-bg;
+}
+
+/* Header : boutons */
+#header {
+	background-color: $couleur-header;
+	border-bottom: 1px solid $couleur-bordure;
+}
+
+/* Colonne latérale : liste des éléments */
+#aside {
+	background-color: $couleur-aside;
+	border-right: 1px solid $couleur-bordure;
+}
+
+/* Contenu principal + canvas */
+#main {
+	background-color: $couleur-main;
+}
+#canvas {
+	background-color: $couleur-canevas;
+	box-shadow: 0 0 0.33rem rgba(0, 0, 0, 0.05);
+}
+
+/* Pied de page : infos diverses */
+#footer {
+	background-color: $couleur-footer;
+	border-top: 1px solid $couleur-bordure;
+}

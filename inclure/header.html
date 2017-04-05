@@ -1,9 +1,52 @@
-<div id="toolbar">
-	<input type="file" id="loadFile" style="display:none">
-	<button id="loadFileButton">Open</button>
-	<button id="saveFile">Save</button>
-	<button class="delete-element-button" title="deletes the currently selected element (del)">✖ Delete Element</button>
-	<button class="undelete-element-button" title="undeletes most recently deleted element (Ctrl+Z)">↶</button>
-	<button class="duplicate-element-button" title="duplicates currently selected element (Ctrl+D)">⚭ Duplicate Element</button>
-	<button class="change-canvasize-button" title="change size of the area you place elements on">⇲ Change Canvas Size</button>
+<div id="toolbar" class="toolbar">
+
+	<div class="toolbar__item">
+		<input type="file" id="loadFile" style="display:none">
+	</div>
+
+	<div class="toolbar__item-group">
+		<div class="toolbar__item">
+			<button id="loadFileButton" class="toolbar__btn toolbar__btn--ouvrir-html" data-btn="ouvrir-html">
+				Ouvrir
+			</button>
+		</div>
+		<div class="toolbar__item">
+			<button id="saveFile" class="toolbar__btn toolbar__btn--sauver-html" data-btn="sauver-html">
+				Sauver
+			</button>
+		</div>
+	</div>
+
+	<div class="toolbar__item-group">
+		<div class="toolbar__item">
+			<button class="toolbar__btn toolbar__btn--effacer-element" title="deletes the currently selected element (del)" data-btn="effacer-element">
+				Effacer
+			</button>
+		</div>
+		<div class="toolbar__item">
+			<button class="toolbar__btn toolbar__btn--annuler" title="undeletes most recently deleted element (Ctrl+Z)" data-btn="annuler">
+				Annuler
+			</button>
+		</div>
+		<div class="toolbar__item">
+			<button class="toolbar__btn toolbar__btn--dupliquer-element" title="duplicates currently selected element (Ctrl+D)" data-btn="dupliquer-element">
+				Dupliquer
+			</button>
+		</div>
+	</div>
+
+	<div class="toolbar__item-group">
+		<div class="toolbar__item">
+			<button class="toolbar__btn toolbar__btn--taille-canevas" title="change size of the area you place elements on" data-btn="taille-canevas">
+				Dimensions
+			</button>
+		</div>
+	</div>
+
+	<div class="toolbar__item">
+		<button class="toolbar__btn toolbar__btn--codepen" title="Partager sur Codepen" data-btn="codepen">
+			Codepen
+		</button>
+	</div>
+
 </div>

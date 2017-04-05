@@ -11,7 +11,7 @@
 		_init:function(){ //init is called 1)on creation  2)each time when the plugin in called without further arguments
 
 			//if the element can't be edited TODO: cleaner solution?
-			if (this.element.find(".editableArea").length === 0){
+			if (this.element.find(".editable").length === 0){
 				console.log(this.element);
 				return;
 			}
@@ -29,7 +29,7 @@
 				parseInt(Math.random() * 100000000000000); //takes the part behind the "_"
 			var markdownConverter = null;
 
-			this.$editableElement = this.element.find("#"+"editableArea_"+idNr);
+			this.$editableElement = this.element.find("#"+"editable_"+idNr);
 
 			this.editType = this.element.attr("data-editable-mode");
 
@@ -69,7 +69,7 @@
 
 			var editablePosition = this.$editableElement.position();
 
-			/*if(this.element.find(".editableArea").first().hasClass("editableContent-plaintext")){*/
+			/*if(this.element.find(".editable").first().hasClass("editableContent-plaintext")){*/
 			if(this.editType === 'plain'){
 				this.inputElement = $('<input>',{
 				type:"text",
@@ -117,7 +117,7 @@
 		},
 		_leaveEditMode:function(){
 			var editableContent = this.inputElement.val(); //reads what the user wrote
-			/*if(this.element.find(".editableArea").first().hasClass("editableContent-plaintext")){*/
+			/*if(this.element.find(".editable").first().hasClass("editableContent-plaintext")){*/
 
 			var html = this.toHTML(editableContent);
 

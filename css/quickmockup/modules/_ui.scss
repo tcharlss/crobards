@@ -1,0 +1,88 @@
+/**
+ * Inputs pour l'édition de contenu
+ */
+.plaintextinput,
+.uielementsinput {
+	z-index: 99;
+	width: auto !important;
+	min-width: 20rem;
+	top: 0 !important;
+	left: 0!important;
+	transform: translateY(calc(-100% - (#{$gouttiere-v} / 2)));
+	padding: $gouttiere-v/2 $gouttiere-h/2;
+}
+
+/**
+ * Redimensionnement des blocs
+ */
+.ui-resizable {
+	// dans la colonne latérale
+	&.page__aside {
+		> .ui-resizable-handle {
+			@extend [class^="icon-"];
+			@extend .icon-menu;
+			transition: background-color 0.25s;
+			right: -10px;
+			width: 10px;
+			&:hover {
+				cursor: col-resize;
+			}
+			&:before {
+				position: absolute;
+				top: 50vh;
+				left: calc(-50% + 2px);
+				font-size: 12px;
+				font-size-adjust: 0.3;
+			}
+		}
+	}
+	// Dans un élément
+	$handle-size: 6px;
+	&.element {
+		.ui-resizable-handle {
+			transition: opacity 0.25s;
+		}
+		.ui-resizable-n {
+			top: 0;
+			height: 1px;
+		}
+		.ui-resizable-e {
+			right: 0;
+			width: 1px;
+		}
+		.ui-resizable-s {
+			bottom: 0;
+			height: 1px;
+		}
+		.ui-resizable-w {
+			left: 0;
+			width: 1px;
+		}
+		.ui-resizable-se,
+		.ui-resizable-sw,
+		.ui-resizable-ne,
+		.ui-resizable-nw {
+			width: $handle-size;
+			height: $handle-size;
+		}
+		.ui-resizable-se {
+			right: -$handle-size/2;
+			bottom: -$handle-size/2;
+			&+.ui-icon {
+				background-image: none;
+			}
+		}
+		.ui-resizable-sw {
+			left: -$handle-size/2;
+			bottom: -$handle-size/2;
+		}
+		.ui-resizable-ne {
+			right: -$handle-size/2;
+			top: -$handle-size/2;
+		}
+		.ui-resizable-nw {
+			left: -$handle-size/2;
+			top: -$handle-size/2;
+		}
+	}
+}

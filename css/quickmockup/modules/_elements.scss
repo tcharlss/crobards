@@ -1,0 +1,72 @@
+/**
+ * Conteneur
+ */
+.elements {
+  margin: 0;
+  padding: $gouttiere-v/2 $gouttiere-h/2;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  &__item {
+    /* item flex */
+    flex: 1 0 auto; // par défaut, 2 colonnes
+    margin: $gouttiere-v/4;
+    /* conteneur flex */
+    display: flex;
+    justify-content: flex-start;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    /* variantes */
+  }
+}
+
+/**
+ * Éléments
+ */
+/* Tous */
+[class|=element] {
+  padding: $gouttiere-v/2 $gouttiere-h/2;
+  //overflow: hidden;
+  /* survol */
+  &:hover {
+    cursor: grab;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
+  textarea {
+    margin: 0;
+  }
+  p {
+    margin-top: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+/* Sur le canvas */
+.element {
+	/* cacher la bordure de redimensionnement par défaut */
+  &:not(.ui-resizable-resizing) {
+    .ui-resizable-handle {
+      opacity: 0;
+    }
+  }
+  /* survol : afficher la bordure de redimensionnement */
+  &:hover {
+    .ui-resizable-handle {
+      opacity: 1;
+    }
+  }
+}
+/* Nouveaux (colonne latérale) */
+.element--nouveau {
+  flex: 1 0 auto;
+  transition: border-color 0.25s;
+}

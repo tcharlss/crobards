@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="#LANG">
+#SET{theme,#ENV{theme}|in_array{#LISTE{dark,light,sketch,old}}|?{#ENV{theme},light}}
 
 <head>
-	<INCLURE{fond=inclure/head}>
+	<INCLURE{fond=inclure/head, theme=#GET{theme}}>
 </head>
 
 <body class="theme_#GET{theme}">

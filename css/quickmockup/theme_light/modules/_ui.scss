@@ -1,0 +1,62 @@
+/**
+ * Inputs pour l'édition de contenu
+ */
+.plaintextinput,
+.uielementsinput {
+	border-radius: 2px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: transparent transparent hsla(0, 0%, 0%, 0.2) hsla(0, 0%, 0%, 0.1);
+	box-shadow: -1px 1px 0.15rem rgba(0, 0, 0, 0.15);
+	background-color: $couleur-1;
+	color: white;
+	font-family: monospace;
+}
+
+/**
+ * Redimensionnement des blocs
+ */
+.ui-resizable:not(.ui-resizable-resizing) {
+	// dans la colonne latérale
+	&.page__aside {
+		> .ui-resizable-handle {
+			//background-color: $couleur-bordure;
+			&:hover {
+				background-color: $couleur-1;
+				&:before {
+					color: rgba(255, 255, 255, 1);
+					text-shadow: none;
+				}
+			}
+			&:before {
+				color: hsla(0, 0%, 0%, 0.33);
+				text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.5);
+			}
+		}
+	}
+	// Dans un élément
+	&.element {
+		.ui-resizable-handle {
+			background-color: $couleur-1;
+			&:hover {
+				background-color: $couleur-2;
+			}
+		}
+	}
+}
+.ui-resizable-resizing {
+	&.page__aside {
+		> .ui-resizable-handle {
+			background-color: $couleur-2;
+			&:before {
+				color: $couleur-gris-fonce;
+				text-shadow: none;
+			}
+		}
+	}
+	&.element {
+		.ui-resizable-handle {
+			background-color: $couleur-2;
+		}
+	}
+}

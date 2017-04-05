@@ -1,5 +1,11 @@
-@import "css/quickmockup/variables"; // Variables
-@import "css/quickmockup/layout";    // Placement des blocs principaux, marges
-@import "css/quickmockup/base";      // Reset et cie
+@import "css/quickmockup/variables";         // Variables
+@import "css/quickmockup/layout";            // Placement des blocs principaux, marges
+@import "css/quickmockup/base";              // Reset et cie
+@import "css/quickmockup/fonticon";          // Fonticon
+@import "css/quickmockup/divers";            // Admin SPIP, xdebug et cie
+@import "css/quickmockup/modules/elements";  // Éléments d'interface
+@import "css/quickmockup/modules/ui";        // Jquery UI
+@import "css/quickmockup/modules/toolbar";   // Barre d'outil
+@import "css/quickmockup/perfect-scrollbar"; // JS scrollbar
 
-@import "css/quickmockup/old"; // TEMPORAIRE
+//@import "css/quickmockup/old"; // TEMPORAIRE

@@ -1,0 +1,43 @@
+/**
+ * barre d'outils
+ */
+
+.toolbar {
+	&__item {}
+	&__item:not(:first-child) + .toolbar__item-group,
+	&__item-group:not(:first-child) + .toolbar__item-group,
+	&__item-group:not(:first-child) + .toolbar__item {
+		border-left: 1px solid $couleur-bordure;
+	}
+	&__btn {
+		font-size: 0.66rem;
+		border: 1px solid transparent;
+		border-radius: 2px;
+		background: transparent;
+		&:hover, &:focus {
+			border-color: $couleur-1;
+			color: $couleur-1;
+		}
+		&--ouvrir-html {
+			
+		}
+		&--sauver-html {
+			
+		}
+		&--annuler {
+			
+		}
+		&--dupliquer-element {
+			
+		}
+		&--effacer-element {
+			
+		}
+		&--taille-canevas {
+			
+		}
+		&--codepen {
+			
+		}
+	}
+}

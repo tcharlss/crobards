@@ -1,0 +1,23 @@
+/* couleurs génériques */
+$couleur-1:          hsl(220, 75%, 60%);
+$couleur-2:          hsl(80, 50%, 50%);
+$couleur-gris:       hsl(0, 0%, 66%);
+$couleur-gris-clair: hsl(0, 0%, 95%);
+$couleur-gris-fonce: hsl(0, 0%, 15%);
+
+/* couleurs de fond des blocs principaux */
+$couleur-bg:      $couleur-gris-clair; // fond de page
+$couleur-aside:   white;
+$couleur-header:  $couleur-gris-clair;
+$couleur-footer:  $couleur-gris-clair;
+$couleur-main:    $couleur-gris-clair;
+$couleur-canevas: white; // canevas
+
+/* couleurs de fond des modules */
+$couleur-element:         white;
+$couleur-element-nouveau: $couleur-gris-clair;
+$couleur-bordure:         hsl(0, 0%, 75%);
+
+/* couleurs typo */
+$couleur-texte: hsl(0, 0%, 15%);
+$couleur-lien:  $couleur-1;

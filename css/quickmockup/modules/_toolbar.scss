@@ -1,0 +1,49 @@
+/**
+ * barre d'outils
+ */
+
+.toolbar {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+	&__item-group {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	&__item {
+		margin: 0 1px;
+	}
+	&__btn {
+		@extend [class^="icon-"];
+		padding: $gouttiere-v/4 $gouttiere-h/4;
+		transition: border 0.25s;
+		&:before {
+			display: block;
+			margin: 0 auto 2px;
+			font-size: 1rem;
+		}
+		&--ouvrir-html {
+			@extend .icon-folder-open;
+		}
+		&--sauver-html {
+			@extend .icon-download;
+		}
+		&--annuler {
+			@extend .icon-ccw;
+		}
+		&--dupliquer-element {
+			@extend .icon-docs;
+		}
+		&--effacer-element {
+			@extend .icon-cancel;
+		}
+		&--taille-canevas {
+			@extend .icon-resize-full;
+		}
+		&--codepen {
+			@extend .icon-codepen;
+		}
+	}
+}

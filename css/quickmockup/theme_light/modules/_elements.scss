@@ -1,0 +1,30 @@
+/**
+ * Conteneur
+ */
+.elements {
+  font-size: 0.9em;
+  &__item {
+    /* variantes */
+  }
+}
+
+/**
+ * Éléments
+ */
+/* Tous */
+[class|=element] {
+	border: 1px solid transparent;
+}
+/* Sur le canevas */
+.element {
+  background-color: $couleur-element;
+}
+/* Nouveaux (colonne latérale) */
+.element--nouveau {
+	background-color: $couleur-element-nouveau;
+	// Survol & focus
+	&:hover, &:focus {
+		border: 1px solid $couleur-1;
+	}
+  /* Variantes */
+}

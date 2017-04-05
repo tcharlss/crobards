@@ -1,0 +1,50 @@
+/**
+ * LAYOUT : placement des blocs principaux, gouttière.
+ */
+
+/* Conteneur général */
+#page {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	height: 100%;
+}
+
+/* Header : boutons */
+#header {
+	flex: 1 0 100%;
+	height: $hauteur-header;
+	padding: $gouttiere-v/2 $gouttiere-h/2;
+}
+
+/* Colonne latérale : liste des éléments */
+#aside {
+	flex: 0 1 auto;
+	width: $largeur-aside;
+	height: calc(100% - (#{$hauteur-header} + #{$hauteur-footer}));
+	.aside__inner {
+		overflow-y: auto;
+		overflow-x: hidden;
+		height: 100%;
+	}
+}
+
+/* Contenu principal + canvas */
+#main {
+	flex: 1 0 auto;
+	position: relative;
+	overflow: scroll;
+}
+#canvas {
+	position: absolute;
+	top: $gouttiere-v*2;
+	right: $gouttiere-v*2;
+	bottom : $gouttiere-v*2;
+	left: $gouttiere-h*2;
+}
+
+/* Pied de page : infos diverses */
+#footer {
+	flex: 1 0 100%;
+	height: $hauteur-footer;
+}
