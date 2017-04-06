@@ -4,7 +4,7 @@
 <html lang="#LANG" class="[theme_(#GET{theme})]">
 
 <head>
-	<INCLURE{fond=inclure/head, theme=#GET{theme}}>
+	<INCLURE{fond=crobards/inclure/head, theme=#GET{theme}}>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 
 		[(#REM) Header : barre d'outils ]
 		<header id="header" class="page__header" role="banner">
-			<INCLURE{fond=inclure/header}>
+			<INCLURE{fond=crobards/inclure/header}>
 		</header>
 
 		[(#REM) Conteneur central ]
@@ -21,13 +21,13 @@
 
 			[(#REM) Aside : liste des éléments ]
 			<aside id="aside" class="page__aside" role="complementary" data-resizable="e">
-				<INCLURE{fond=inclure/aside}>
+				<INCLURE{fond=crobards/inclure/aside}>
 			</aside>
 
 			[(#REM) Main : canevas ]
 			<main id="main" class="page__main" role="main">
 				<div id="canevas" class="page__canevas ui-droppable" style="height: 2000px; width: 2000px;">
-					<INCLURE{fond=inclure/canevas_defaut}>
+					<INCLURE{fond=crobards/inclure/canevas_defaut}>
 				</div>
 			</main>
 
@@ -39,11 +39,11 @@
 
 		[(#REM) Footer : infos ]
 		<footer id="footer" class="page__footer" role="contentinfo">
-			<INCLURE{fond=inclure/footer}>
+			<INCLURE{fond=crobards/inclure/footer}>
 		</footer>
 
 		[(#REM) Choses techniques non visibles par défaut (modales, etc.) ]
-		<INCLURE{fond=inclure/invisible}/>
+		<INCLURE{fond=crobards/inclure/invisible}/>
 
 	</div>
 </body>

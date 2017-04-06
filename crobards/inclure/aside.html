@@ -1,10 +1,10 @@
 <div class="aside__inner">
 	<ul id="elements" class="elements">
-		#SET{filtre_elements, #VAL{_DIR_PLUGIN_QUICKMOCKUP}|constant|concat{elements/*.html}}
+		#SET{filtre_elements, #VAL{_DIR_PLUGIN_QUICKMOCKUP}|constant|concat{crobards/elements/*.html}}
 		<BOUCLE_elements(DATA){source glob, #GET{filtre_elements}}{par valeur}>
 		#SET{regex_numerotation,^\d+[\.\-_]\s?}
 		#SET{element,#VALEUR|pathinfo|table_valeur{filename}|replace{#GET{regex_numerotation}}}
-		#SET{fond,#VAL{elements/}|concat{#VALEUR|pathinfo|table_valeur{filename}}}
+		#SET{fond,#VAL{crobards/elements/}|concat{#VALEUR|pathinfo|table_valeur{filename}}}
 		<li
 			class="elements__item elements__item--#GET{element}"
 			title="[(#VAL{quickmockup:element_}|concat{#GET{element},_nom}|_T|attribut_html)]"
