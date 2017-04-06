@@ -6,22 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 #INSERT_HEAD
-<script src="#CHEMIN{javascript/ui/jquery-ui.js}"></script>
-<script src="#CHEMIN{javascript/showdown.js}"></script>
-<script src="#CHEMIN{javascript/showdownUIExtensions.js}"></script>
-<script src="#CHEMIN{javascript/mousetrap.js}"></script>
-<script src="#CHEMIN{javascript/filereader.js}"></script>
-<script src="#CHEMIN{javascript/FileSaver.js}"></script>
-<script src="#CHEMIN{javascript/jqUiEditMD2HTML.js}"></script>
-<script src="#CHEMIN{javascript/perfect-scrollbar.jquery.js}"></script>
-<script src="#CHEMIN{javascript/jquery.dragscroll.js}"></script>
-<script src="#CHEMIN{javascript/quickmockup.js}"></script>
+[<script src="(#CHEMIN{javascript/ui/jquery-ui.js}|sinon{#CHEMIN{javascript/jquery-ui.js}})"></script>]
+[<script src="(#CHEMIN{javascript/showdown.js})"></script>]
+[<script src="(#CHEMIN{javascript/showdownUIExtensions.js})"></script>]
+[<script src="(#CHEMIN{javascript/mousetrap.js})"></script>]
+[<script src="(#CHEMIN{javascript/filereader.js})"></script>]
+[<script src="(#CHEMIN{javascript/FileSaver.js})"></script>]
+[<script src="(#CHEMIN{javascript/jqUiEditMD2HTML.js})"></script>]
+[<script src="(#CHEMIN{javascript/perfect-scrollbar.jquery.js})"></script>]
+[<script src="(#CHEMIN{javascript/jquery.dragscroll.js})"></script>]
+[<script src="(#CHEMIN{javascript/quickmockup.js})"></script>]
 
 #INSERT_HEAD_CSS
-<link href="#CHEMIN{css/ui/jquery-ui.css}" rel="stylesheet">
-<link href="#CSS{css/quickmockup/quickmockup.css}" rel="stylesheet">
-<link href="#CSS{css/quickmockup/font.css}" rel="stylesheet">
+[<link href="(#CSS{css/ui/jquery-ui.css})" rel="stylesheet">]
+[<link href="(#CSS{css/quickmockup/quickmockup.css})" rel="stylesheet">]
+[<link href="(#CSS{css/quickmockup/font.css})" rel="stylesheet">]
 [(#REM) Le thème doit être inclus en inline avec un ID pour l'export HTML.]
-<style id="elementStyles">
-	[(#INCLURE{#CHEMIN{css/quickmockup/theme_#ENV{theme}/#ENV{theme}.scss}}|scss_css)]
-</style>
+[<style id="elementStyles">
+	(#INCLURE{#CHEMIN{css/quickmockup/theme_#ENV{theme}/#ENV{theme}.scss}}|scss_css)
+</style>]
