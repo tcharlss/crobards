@@ -63,9 +63,12 @@
 	overflow: scroll;
 }
 #canevas {
+	$gouttiere-canevas: $gouttiere-v*2;
 	position: absolute;
-	top: $gouttiere-v*2;
-	right: $gouttiere-v*2;
-	bottom : $gouttiere-v*2;
-	left: $gouttiere-h*2;
+	top: $gouttiere-canevas;
+	right: $gouttiere-canevas;
+	bottom : $gouttiere-canevas;
+	left: $gouttiere-canevas;
+	width: calc(100% - (#{$gouttiere-canevas} * 2));
+	height: calc(100% - (#{$gouttiere-canevas} * 2));
 }
