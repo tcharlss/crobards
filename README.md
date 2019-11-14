@@ -1,10 +1,6 @@
-#Crobards
+# Crobards
 
-**Ce projet est en stand by jusqu'à nouvel ordre.
-En attendant, allez voir [CSS wireframes](https://github.com/LesDeveloppementsDurables/css-wireframes) !
-Par la suite, crobards reposera éventuallement sur ce dernier.**
-
----
+> **Projet avorté, Passez votre chemin !**
 
 En pleine phase de développement, des fonctionnalités sont manquantes, non finies ou susceptibles de changer.
 
